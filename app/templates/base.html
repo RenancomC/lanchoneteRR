@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lanchonete RR</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/R.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css')}}">
 </head>
-<body>
-    
-{% block conteudo %}
-{% endblock %}
 
+<body>
+    <div class="sidebar-container">
+        <div class="sidebar">
+            <div class="perfil-container">
+                <div class="fotoPerfil"></div>
+                <div class="login">
+                    <a href="/login">Login</a>
+                    <a href="/cadastro">Cadastro</a>
+                </div>
+            </div>
+            <nav>
+                <ul id="navegacao">
+                    <li class="nav"><a class="menu" href="/index"><img class="nav-imagem"
+                                src="{{ url_for('static', filename='img/home.png')}}"></a></li>
+                    <li class="nav-lanche"><a class="menu" href="/lanche"><img class="nav-imagem"
+                                src="{{ url_for('static', filename='img/lanche.png')}}"></a></li>
+                    <li class="nav"><a class="menu" href="/bebida"><img class="nav-imagem"
+                                src="{{ url_for('static', filename='img/bebida.png')}}"></a></li>
+                    <li class="nav"><a class="menu" href="/sobremesa"><img class="nav-imagem"
+                                src="{{ url_for('static', filename='img/doce.png')}}"></a></li>
+                    <li class="nav"><a class="menu" href="/guarnicao"><img class="nav-imagem"
+                                src="{{ url_for('static', filename='img/guarnicao.png')}}"></a></li>
+                    <li class="nav"><a class="menu" href="/criarLanche"><img class="nav-imagem"
+                                src="{{ url_for('static', filename='img/criarLanche.png')}}"></a></li>
+                    <li class="nav"><a class="menu" href="/carrinho"><img class="nav-imagem"
+                                src="{{ url_for('static', filename='img/carrinho.png')}}"></a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+    <div class="conteudo">
+        <h1>Conteúdo Principal</h1>
+        <p>Lorem ipsum dolor sit amet...</p>
+        <!-- Conteúdo longo para rolagem -->
+        <header>
+
+        </header>
+
+        <main>
+            {% block conteudo %}
+            {% endblock %}
+        </main>
+        <footer>
+
+        </footer>
+        <p style="margin-top: 2000px;">Fim do conteúdo</p>
+    </div>
 </body>
+
 </html>

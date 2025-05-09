@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sidebar Expandível</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+    }
+
+    .sidebar-container {
+      background-color: #333;
+      overflow: hidden;
+      transition: width 0.3s ease;
+      width: 60px; /* Largura recolhida */
+    }
+
+    .sidebar-container:hover {
+      width: 140px; /* Largura expandida */
+    }
+
+    .sidebar {
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .conteudo {
+      padding: 2rem;
+      overflow-y: auto;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="">
+    <div class="sidebar">
+      <h2>Menu</h2>
+      <p>Item 1</p>
+      <p>Item 2</p>
+    </div>
+  </div>
+
+  <div class="conteudo">
+    <h1>Conteúdo Principal</h1>
+    <p>Lorem ipsum dolor sit amet...</p>
+    <p style="margin-top: 2000px;">Fim do conteúdo</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.sidebar-container {
+    background-color: #11ff04;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    width: 60px;
+    /* Largura recolhida */
+}
+
+.sidebar-container:hover {
+    width: 140px;
+    /* Largura expandida */
+}
+
+.sidebar {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo {
+    padding: 2rem;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.nav-imagem {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.nav-imagem:hover {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+#navegacao {
+    width: 100px;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+/* perfil */
+.perfil-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.fotoPerfil {
+    width: 55px;
+    height: 55px;
+    background-color: #3498db;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid black;
+}
+
+.fotoPerfil:hover {
+    background-color: #2980b9;
+}
+
+.login {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 102px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.login a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+}
+
+.login a:last-child {
+    border-bottom: none;
+}
+
+.login a:hover {
+    background-color: #77ff70;
+}
+
+.perfil-container:hover .login {
+    display: flex;
+}
+
+.sidebar-container:hover .fotoPerfil {
+    width: 100px;
+    height: 100px;
+    transition: 0.5s;
+}
